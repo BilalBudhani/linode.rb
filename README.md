@@ -1,6 +1,6 @@
 # Linode API Rubygem
 
-*This gem is currently in "work in progress" state – please use it carefully*
+**This gem is currently in "work in progress" state – please use it carefully because things are bound to break until we hit stable release**
 
 [![Build Status](https://github.com/bilalbudhani/linode.rb/workflows/Tests/badge.svg)](https://github.com/bilalbudhani/linode.rb/actions)
 

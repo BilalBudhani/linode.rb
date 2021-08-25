@@ -20,6 +20,14 @@ module Linode
       @tokens ||= TokensResource.new(self)
     end
 
+    def regions
+      @regions ||= RegionsResource.new(self)
+    end
+
+    def types
+      @types ||= TypesResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new do |conn|
         conn.url_prefix = BASE_URL

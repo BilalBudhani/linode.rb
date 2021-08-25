@@ -12,7 +12,7 @@ module Linode
       )
     end
 
-    def initialize(data:, page:, pages:, result:)
+    def initialize(data:, page:, pages:, results:)
       @data = data
       @page = page
       @pages = pages

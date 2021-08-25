@@ -2,7 +2,7 @@ module Linode
   class TokensResource < Resource
     def list(**params)
       response = get_request("profile/tokens", params: params)
-      Collection.from_response(response, type: Instance)
+      Collection.from_response(response, type: Token)
     end
 
     def create(**attributes)
