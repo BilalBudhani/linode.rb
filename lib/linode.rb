@@ -13,6 +13,7 @@ module Linode
   autoload :InstancesResource, "linode/resources/instances"
   autoload :TokensResource, "linode/resources/tokens"
   autoload :RegionsResource, "linode/resources/regions"
+  autoload :SshKeysResource, "linode/resources/ssh_keys"
   autoload :TypesResource, "linode/resources/types"
 
 
@@ -20,4 +21,5 @@ module Linode
   autoload :Token, "linode/objects/token"
   autoload :Region, "linode/objects/region"
   autoload :Type, "linode/objects/type"
+  autoload :SshKey, "linode/objects/ssh_key"
 end
