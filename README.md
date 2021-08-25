@@ -28,10 +28,10 @@ client = Linode::Client.new(api_key: ENV["LINODE_API_KEY"])
 
 ## Contributing
 
-1. Fork it ( https://github.com/tolbkni/vultr/fork )
+1. Fork it ( https://github.com/bilalbudhani/linode.rb/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create a new Pull Request
 
-When adding methods, add to the list of DEFINITIONS in lib/vultr.rb. Additionally, write a spec and add it to the list in the README.
+When adding methods, add to the list of DEFINITIONS in lib/linode.rb. Additionally, write a spec and add it to the list in the README.
