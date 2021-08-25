@@ -35,17 +35,17 @@ module Linode
     def handle_response(response)
       case response.status
       when 400
-        raise Error, "Your request was malformed. #{response.body["error"]}"
+        raise Error, "Your request was malformed. #{response.body["errors"].first.dig('reason')}"
       when 401
-        raise Error, "You did not supply valid authentication credentials. #{response.body["error"]}"
+        raise Error, "You did not supply valid authentication credentials. #{response.body["errors"].first.dig('reason')}"
       when 403
-        raise Error, "You are not allowed to perform that action. #{response.body["error"]}"
+        raise Error, "You are not allowed to perform that action. #{response.body["errors"].first.dig('reason')}"
       when 404
-        raise Error, "No results were found for your request. #{response.body["error"]}"
+        raise Error, "No results were found for your request. #{response.body["errors"].first.dig('reason')}"
       when 429
-        raise Error, "Your request exceeded the API rate limit. #{response.body["error"]}"
+        raise Error, "Your request exceeded the API rate limit. #{response.body["errors"].first.dig('reason')}"
       when 500
-        raise Error, "We were unable to perform the request due to server-side problems. #{response.body["error"]}"
+        raise Error, "We were unable to perform the request due to server-side problems. #{response.body["errors"].first.dig('reason')}"
       end
 
       response

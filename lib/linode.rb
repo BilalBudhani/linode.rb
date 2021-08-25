@@ -10,7 +10,9 @@ module Linode
 
 
   autoload :InstancesResource, "linode/resources/instances"
+  autoload :TokensResource, "linode/resources/tokens"
 
 
   autoload :Instance, "linode/objects/instance"
+  autoload :Token, "linode/objects/token"
 end

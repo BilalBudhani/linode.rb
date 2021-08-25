@@ -16,6 +16,10 @@ module Linode
       @instances ||= InstancesResource.new(self)
     end
 
+    def tokens
+      @tokens ||= TokensResource.new(self)
+    end
+
     def connection
       @connection ||= Faraday.new do |conn|
         conn.url_prefix = BASE_URL
